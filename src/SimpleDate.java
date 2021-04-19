@@ -12,15 +12,15 @@ public class SimpleDate {
      }
 
     public int getYear() {
-        return year;
+        return this.year;
     }
 
     public int getDay() {
-        return day;
+        return this.day;
     }
 
     public int getMonth() {
-        return month;
+        return this.month;
     }
 
     public void setYear(int year) {
@@ -73,6 +73,24 @@ public class SimpleDate {
          return false;
      }
 
+     @Override
+     public boolean equals(Object s){      //compares all java objects to simple date obj.
+         if(this == s){
+             return true;
+         }
+         if(!(s instanceof SimpleDate)){
+             return false;
+         }
+
+         SimpleDate newS = (SimpleDate) s;
+         if(this.year == newS.year && this.month == newS.month && this.day == newS.day){
+             return true;
+         }
+         return false;
+     }
+
+
+     @Override
      public String toString(){
          return this.day + "." + this.month + "." + this.year;
      }

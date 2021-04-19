@@ -6,7 +6,7 @@ public class PaymentCard {
     }
 
     public double getBalance() {
-        return balance;
+        return this.balance;
     }
 
     public void setBalance(double balance) {
@@ -16,7 +16,7 @@ public class PaymentCard {
     @Override
     public String toString() {
         return "PaymentCard{" +
-                "balance=" + balance +
+                "balance=" + this.balance +
                 '}';
     }
 
