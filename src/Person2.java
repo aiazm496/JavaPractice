@@ -15,4 +15,11 @@ public class Person2 {
         return  this.height;
     }
 
+    @Override
+    public String toString() {
+        return "Person2{" +
+                "name='" + name + '\'' +
+                ", height=" + height +
+                '}';
+    }
 }
