@@ -15,5 +15,25 @@ public class CargoHoldQ {
         Item food = new Item("Wheat", 5);
         s.addItem(food);
         System.out.println(s);
+
+        System.out.println("Items list: ");
+        s.printItems();
+
+        Item heaviest = s.heaviestItem();
+        System.out.print("Heaviest item: ");
+        System.out.println(heaviest);
+
+        Suitcase s2 = new Suitcase(2);
+        s2.addItem(gadget);
+
+        Hold h = new Hold(10);
+        h.addSuitcase(s);
+        h.addSuitcase(s2);
+
+        System.out.println(h);
+
+        System.out.println("Suitcase contain following items: ");
+        h.printItems();
+
     }
 }

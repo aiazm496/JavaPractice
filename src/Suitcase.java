@@ -27,8 +27,39 @@ public class Suitcase {
         return totalWeight;
     }
 
+    public Item heaviestItem(){
+        if(this.items.isEmpty()){
+            return null;
+        }
+        Item heaviest = this.items.get(0); //considering first item ob in list to be heaviest.
+        for(Item i : this.items){
+            if(i.getWeight()>heaviest.getWeight()){
+                heaviest = i;
+            }
+        }
+
+        return heaviest;
+
+    }
+
+    public void printItems(){
+        if(this.items.isEmpty()){
+            System.out.println("no items present");
+        }
+        for(Item i : this.items){
+            System.out.println(i);
+        }
+    }
+
     public String toString(){
-        return this.items.size() + " items " + "(" +  this.totalWeight() +  " kg )";
+        if(this.items.isEmpty()){
+            return "no items";
+        }
+        if(this.items.size()==1){
+            return this.items.size() + " item " + "(" +  this.totalWeight() +  " kg)";
+        }
+
+        return this.items.size() + " items " + "(" +  this.totalWeight() +  " kg)";
 
     }
 
